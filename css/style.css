@@ -1,0 +1,95 @@
+/* Reset default margin and padding */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #000; /* Pitch black background */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-top: 0; /* Remove margin from the top */
+}
+
+header h1 {
+    margin: 10px 0; /* Adjust margin around the title */
+}
+
+nav {
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+    position: relative;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    transition: color 0.3s ease, font-weight 0.3s ease;
+}
+
+/* Hover underline effect */
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: #add8e6; /* Light blue color */
+    transform: scaleX(0); /* Initially hidden */
+    transition: transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    font-weight: bold;
+    color: #add8e6; /* Light blue color */
+    transform: scale(1.1); /* Increase size on hover */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add shadow effect */
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1); /* Expand the line */
+}
+
+main {
+    text-align: center;
+    padding: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}
+
+.discord-link {
+    font-size: 24px;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
