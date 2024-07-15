@@ -1,95 +1,113 @@
-/* Reset default margin and padding */
-body, h1, h2, p, ul, li {
-    margin: 0;
-    padding: 0;
-}
-
-/* Basic styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #ffffff;
 }
 
 header {
-    background-color: #000; /* Pitch black background */
-    color: #fff;
-    padding: 20px;
+    background-color: #1f1f1f;
+    padding: 10px 0;
     text-align: center;
-    margin-top: 0; /* Remove margin from the top */
 }
 
-header h1 {
-    margin: 10px 0; /* Adjust margin around the title */
-}
-
-nav {
-    text-align: center;
+.banner {
+    width: 100%;
+    height: auto;
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 20px;
     position: relative;
 }
 
 nav ul li a {
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
-    font-size: 18px;
-    position: relative;
-    transition: color 0.3s ease, font-weight 0.3s ease;
-}
-
-/* Hover underline effect */
-nav ul li a::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -2px;
-    width: 100%;
-    height: 2px;
-    background-color: #add8e6; /* Light blue color */
-    transform: scaleX(0); /* Initially hidden */
-    transition: transform 0.3s ease;
+    padding: 10px 20px;
+    transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    font-weight: bold;
-    color: #add8e6; /* Light blue color */
-    transform: scale(1.1); /* Increase size on hover */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add shadow effect */
+    color: #ff8c00;
 }
 
-nav ul li a:hover::after {
-    transform: scaleX(1); /* Expand the line */
+nav ul li::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #ff8c00;
+    transition: width 0.3s;
+}
+
+nav ul li:hover::after {
+    width: 100%;
+    transition: width 0.3s;
 }
 
 main {
-    text-align: center;
     padding: 20px;
+}
+
+h1, h2 {
+    color: #ff8c00;
+}
+
+.welcome, .streams, .about-me, .partnerships, .contact {
+    margin-bottom: 40px;
+}
+
+.stream, .partnership {
+    background-color: #1f1f1f;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.partnership img {
+    width: 100px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.partnership-info {
+    overflow: hidden;
+}
+
+.socials {
+    list-style-type: none;
+    padding: 0;
+}
+
+.socials li {
+    display: inline;
+    margin-right: 15px;
+}
+
+.socials li a {
+    color: #ff8c00;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.socials li a:hover {
+    color: #ffffff;
 }
 
 footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
+    background-color: #1f1f1f;
+    padding: 10px 0;
     text-align: center;
-    width: 100%;
-}
-
-footer p {
-    margin: 0;
-}
-
-.discord-link {
-    font-size: 24px;
-    text-decoration: none;
-    color: inherit;
-    display: block;
 }
